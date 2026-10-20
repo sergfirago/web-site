@@ -61,7 +61,7 @@ img {
         radial-gradient(circle at top right, rgba(184, 212, 227, 0.45), transparent 35%),
         radial-gradient(circle at bottom left, rgba(245, 198, 214, 0.35), transparent 30%),
         var(--bg-main);
-    padding: 80px 0 96px;
+    padding: 56px 0 64px;
 }
 
 .hero-content {
@@ -86,7 +86,7 @@ img {
 }
 
 .hero-text {
-    margin: 0 0 32px;
+    margin: 0 0 24px;
     font-size: 1.15rem;
     max-width: 680px;
 }
@@ -351,7 +351,27 @@ img {
 
 .form-grid {
     display: grid;
+    grid-template-columns: 1fr;
     gap: 18px;
+}
+
+.form-required-note {
+    margin: 0 0 16px;
+    font-size: 0.88rem;
+    color: #6c757d;
+}
+
+.field-error {
+    color: #c0392b;
+    font-size: 0.88rem;
+}
+
+.form-grid [aria-invalid="true"] {
+    border-color: #c0392b;
+}
+
+#registration-form {
+    scroll-margin-top: 24px;
 }
 
 .form-grid label {
@@ -395,8 +415,7 @@ img {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 18px;
-    margin-top: 32px;
+    gap: 12px;
 }
 
 .btn-hero {
@@ -412,6 +431,13 @@ img {
 }
 
 .hero-trust {
+    font-size: 0.95rem;
+    color: var(--heading);
+}
+
+.hero-assurance {
+    flex-basis: 100%;
+    margin: 0;
     font-size: 0.95rem;
     color: var(--heading);
 }
@@ -578,13 +604,8 @@ img {
     text-align: center;
 }
 
-.form-grid {
-    grid-template-columns: 1fr 1fr;
-}
-
-.form-grid label:nth-child(4),
-.form-grid > button {
-    grid-column: 1 / -1;
+.form-contacts + .social-proof {
+    margin-top: 28px;
 }
 
 /* Аккордеон программы */
@@ -632,12 +653,6 @@ img {
     transform: translateY(-1px);
 }
 
-@media (max-width: 720px) {
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 @media print {
     .sticky-cta {
         display: none;
@@ -658,7 +673,16 @@ img {
 
     .hero {
         min-height: auto;
-        padding-top: 56px;
+        padding-top: 32px;
+    }
+
+    .hero h1 {
+        margin-bottom: 16px;
+        font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .btn-hero {
+        padding-inline: 20px;
     }
 
     .registration-panel,

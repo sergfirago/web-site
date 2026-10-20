@@ -1,22 +1,51 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const registrationSection = document.getElementById('registration');
     const form = document.getElementById('registration-form');
     const message = document.getElementById('form-message');
     const registerButtons = document.querySelectorAll('.btn-register');
 
     registerButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            if (!registrationSection) {
+            if (!form) {
                 return;
             }
 
-            registrationSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            form.querySelector('input')?.focus({ preventScroll: true });
+            form.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'start' });
         });
     });
 
     if (!form) {
         return;
     }
+
+    const fields = form.querySelectorAll('input, textarea');
+
+    const clearFieldError = (field) => {
+        const error = document.getElementById(`${field.name}-error`);
+        field.removeAttribute('aria-invalid');
+        if (error) {
+            error.textContent = '';
+            error.hidden = true;
+        }
+    };
+
+    fields.forEach((field) => {
+        field.addEventListener('invalid', () => {
+            const error = document.getElementById(`${field.name}-error`);
+            field.setAttribute('aria-invalid', 'true');
+            if (error) {
+                error.textContent = field.validationMessage;
+                error.hidden = false;
+            }
+        });
+
+        field.addEventListener('input', () => {
+            if (field.validity.valid) {
+                clearFieldError(field);
+            }
+        });
+    });
 
     form.addEventListener('submit', async (event) => {
         event.preventDefault();
@@ -59,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             form.reset();
+            fields.forEach(clearFieldError);
         } catch (error) {
             if (message) {
                 message.textContent = error instanceof Error ? error.message : 'Не удалось отправить заявку.';

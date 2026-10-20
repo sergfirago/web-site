@@ -21,14 +21,17 @@
 <body>
     <header class="hero">
         <div class="container hero-content">
-            <span class="hero-badge">Ближайший курс · 14 ноября 2026 · Москва</span>
-            <h1>Первая помощь: практический курс для каждого</h1>
+            <span class="hero-badge">14 ноября 2026 · Москва</span>
+            <h1>Первая помощь за один день</h1>
             <p class="hero-text">
-                Научитесь действовать уверенно в экстренной ситуации: остановить кровотечение,
-                провести сердечно-легочную реанимацию, помочь при травмах и ожогах до приезда
-                медиков. Курс построен на практике с инструкторами, которые каждый день работают
-                с реальными вызовами.
+                Отработайте СЛР, остановку кровотечения и помощь при травмах на манекенах —
+                с инструкторами, которые работают на реальных вызовах.
             </p>
+            <div class="hero-actions">
+                <button type="button" class="btn btn-register btn-hero">Занять место — от 4 900 ₽</button>
+                <span class="hero-trust">Сертификат · 8 часов практики · группа до 14 человек</span>
+                <p class="hero-assurance">Бронь бесплатна. Перезвоним для подтверждения. Оплата — после звонка.</p>
+            </div>
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
@@ -42,10 +45,6 @@
                     <strong>Место</strong>
                     Москва, ул. Примерная, 10, учебный центр «Спаси-Себя»
                 </div>
-            </div>
-            <div class="hero-actions">
-                <button type="button" class="btn btn-register btn-hero">Занять место — от 4 900 ₽</button>
-                <span class="hero-trust">Сертификат · 8 часов практики · группа до 14 человек</span>
             </div>
             <p class="geo-note">
                 Не из Москвы? Мы готовим онлайн-формат курса — оставьте заявку, и сообщим о запуске первыми.
@@ -352,10 +351,43 @@
         <section class="section registration-section" id="registration">
             <div class="container">
                 <div class="registration-panel">
-                    <h2 class="section-title">Забронировать место на курс 14 ноября</h2>
+                    <h2 class="section-title">Бесплатная бронь места</h2>
                     <p class="section-lead">
-                        Бронирование бесплатное и ни к чему не обязывает: перезвоним в течение рабочего дня,
-                        подтвердим место и ответим на вопросы. Оплата — после звонка, если место подходит.
+                        Курс 14 ноября · Москва · от 4 900 ₽.
+                        Перезвоним для подтверждения. Оплата — после звонка.
+                    </p>
+                    <p class="form-required-note">* — обязательные поля</p>
+                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
+                        <label>
+                            Имя *
+                            <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться" aria-describedby="name-error">
+                            <span class="field-error" id="name-error" aria-live="polite" hidden></span>
+                        </label>
+                        <label>
+                            Телефон *
+                            <span class="form-hint" id="phone-hint">Перезвоним, чтобы подтвердить место</span>
+                            <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7 (900) 000-00-00" aria-describedby="phone-hint phone-error">
+                            <span class="field-error" id="phone-error" aria-live="polite" hidden></span>
+                        </label>
+                        <label>
+                            E-mail *
+                            <input type="email" name="email" required autocomplete="email" placeholder="you@example.ru" aria-describedby="email-error">
+                            <span class="field-error" id="email-error" aria-live="polite" hidden></span>
+                        </label>
+                        <label>
+                            Цель прохождения курса *
+                            <span class="form-hint" id="purpose-hint">Одной фразы достаточно: для семьи, работы или поездок</span>
+                            <textarea name="purpose" required placeholder="Хочу уметь помочь близким" aria-describedby="purpose-hint purpose-error"></textarea>
+                            <span class="field-error" id="purpose-error" aria-live="polite" hidden></span>
+                        </label>
+                        <button type="submit" class="btn">Забронировать бесплатно</button>
+                        <p class="form-assurance">Бронь бесплатна и ни к чему не обязывает. Оплата — только после подтверждения места по телефону.</p>
+                    </form>
+                    <p class="form-message" id="form-message" aria-live="polite"></p>
+                    <p class="form-contacts">
+                        Не хочется заполнять форму? Напишите нам:
+                        <a href="mailto:info@spasi-sebya.ru">info@spasi-sebya.ru</a> ·
+                        Telegram: <a href="https://t.me/spasi_sebya" rel="noopener">@spasi_sebya</a>
                     </p>
                     <div class="social-proof">
                         <div class="proof-item">
@@ -379,33 +411,6 @@
                             <cite>— Игорь, поток сентября 2026</cite>
                         </blockquote>
                     </div>
-                    <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
-                        <label>
-                            Имя
-                            <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
-                        </label>
-                        <label>
-                            Телефон
-                            <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7 (900) 000-00-00">
-                        </label>
-                        <label>
-                            E-mail
-                            <input type="email" name="email" required autocomplete="email" placeholder="you@example.ru">
-                        </label>
-                        <label>
-                            Цель прохождения курса
-                            <span class="form-hint">достаточно одного предложения</span>
-                            <textarea name="purpose" required placeholder="Например: хочу действовать уверенно в походе и на даче"></textarea>
-                        </label>
-                        <button type="submit" class="btn">Забронировать место — перезвоним сегодня</button>
-                        <p class="form-assurance">Бронь бесплатна и ни к чему не обязывает. Оплата — только после подтверждения места по телефону.</p>
-                    </form>
-                    <p class="form-message" id="form-message" aria-live="polite"></p>
-                    <p class="form-contacts">
-                        Не хочется заполнять форму? Напишите нам:
-                        <a href="mailto:info@spasi-sebya.ru">info@spasi-sebya.ru</a> ·
-                        Telegram: <a href="https://t.me/spasi_sebya" rel="noopener">@spasi_sebya</a>
-                    </p>
                 </div>
             </div>
         </section>
