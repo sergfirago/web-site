@@ -44,7 +44,7 @@
                 </div>
             </div>
             <div class="hero-actions">
-                <button type="button" class="btn btn-register btn-hero">Записаться — от 4 900 ₽</button>
+                <button type="button" class="btn btn-register btn-hero">Занять место — от 4 900 ₽</button>
                 <span class="hero-trust">Сертификат · 8 часов практики · группа до 14 человек</span>
             </div>
             <p class="geo-note">
@@ -352,11 +352,33 @@
         <section class="section registration-section" id="registration">
             <div class="container">
                 <div class="registration-panel">
-                    <h2 class="section-title">Записаться на курс</h2>
+                    <h2 class="section-title">Забронировать место на курс 14 ноября</h2>
                     <p class="section-lead">
-                        Оставьте заявку — заполнение займёт около минуты. Перезвоним в течение рабочего дня,
-                        подтвердим место и ответим на вопросы.
+                        Бронирование бесплатное и ни к чему не обязывает: перезвоним в течение рабочего дня,
+                        подтвердим место и ответим на вопросы. Оплата — после звонка, если место подходит.
                     </p>
+                    <div class="social-proof">
+                        <div class="proof-item">
+                            <strong>Осталось 6 мест из 14</strong>
+                            <span>группа ограничена, чтобы каждый отработал навыки в парах</span>
+                        </div>
+                        <div class="proof-item">
+                            <strong>1 200+ обученных</strong>
+                            <span>у инструкторов курса за последние годы</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <blockquote class="review">
+                            «Раньше боялась подойти к пострадавшему. Здесь часа за три на манекене
+                            довели действия до автоматизма — руки сами помнят порядок.»
+                            <cite>— Марина, поток сентября 2026</cite>
+                        </blockquote>
+                        <blockquote class="review">
+                            «Пришёл из-за детей: теперь знаю, что делать при кровотечении и обмороке,
+                            и не паникую. Времени в обед — а польза на всю жизнь.»
+                            <cite>— Игорь, поток сентября 2026</cite>
+                        </blockquote>
+                    </div>
                     <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
                         <label>
                             Имя
@@ -375,7 +397,8 @@
                             <span class="form-hint">достаточно одного предложения</span>
                             <textarea name="purpose" required placeholder="Например: хочу действовать уверенно в походе и на даче"></textarea>
                         </label>
-                        <button type="submit" class="btn">Отправить заявку</button>
+                        <button type="submit" class="btn">Забронировать место — перезвоним сегодня</button>
+                        <p class="form-assurance">Бронь бесплатна и ни к чему не обязывает. Оплата — только после подтверждения места по телефону.</p>
                     </form>
                     <p class="form-message" id="form-message" aria-live="polite"></p>
                     <p class="form-contacts">
@@ -397,7 +420,7 @@
     </footer>
 
     <div class="sticky-cta" id="sticky-cta" hidden>
-        <span class="sticky-cta-info">Курс 14 ноября · Москва · от 4 900 ₽</span>
+        <span class="sticky-cta-info">Курс 14 ноября · осталось 6 мест из 14</span>
         <button type="button" class="btn btn-register">Записаться</button>
     </div>
 

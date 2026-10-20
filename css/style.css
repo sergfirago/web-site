@@ -518,6 +518,126 @@ img {
     }
 }
 
+/* === Волна 2: снятие страха обязательства, соцдоказательство, аккордеон === */
+.social-proof {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+    margin: 0 0 18px;
+}
+
+.proof-item {
+    display: grid;
+    gap: 4px;
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, #ffffff, #eef8ef);
+    box-shadow: var(--shadow);
+}
+
+.proof-item strong {
+    color: var(--heading);
+    font-size: 1.05rem;
+}
+
+.proof-item span {
+    font-size: 0.88rem;
+    color: #6c757d;
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin: 0 0 28px;
+}
+
+.review {
+    margin: 0;
+    padding: 16px 18px;
+    border-left: 5px solid var(--blue);
+    border-radius: 0 14px 14px 0;
+    background: #faf6f0;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.review cite {
+    display: block;
+    margin-top: 8px;
+    font-style: normal;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.form-assurance {
+    grid-column: 1 / -1;
+    margin: -6px 0 0;
+    font-size: 0.88rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+.form-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.form-grid label:nth-child(4),
+.form-grid > button {
+    grid-column: 1 / -1;
+}
+
+/* Аккордеон программы */
+.program-module > p {
+    position: relative;
+    max-height: 66px;
+    overflow: hidden;
+    margin-bottom: 0;
+    transition: max-height 0.25s ease;
+}
+
+.program-module > p::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff 80%);
+}
+
+.program-module.module-open > p {
+    max-height: 2000px;
+}
+
+.program-module.module-open > p::after {
+    display: none;
+}
+
+.module-toggle {
+    justify-self: start;
+    margin-top: 10px;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 999px;
+    background: var(--blue);
+    color: var(--heading);
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.module-toggle:hover {
+    transform: translateY(-1px);
+}
+
+@media (max-width: 720px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media print {
     .sticky-cta {
         display: none;

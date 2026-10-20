@@ -50,6 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 message.className = 'form-message success';
             }
 
+            // Измерение конверсии: GA4 + Яндекс.Метрика (fetch-отправка не даёт событий автоматически)
+            if (typeof gtag === 'function') {
+                gtag('event', 'form_submit');
+            }
+            if (typeof ym === 'function') {
+                ym(113501155, 'reachGoal', 'ORDER');
+            }
+
             form.reset();
         } catch (error) {
             if (message) {
@@ -67,7 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Плавающая кнопка «Записаться»: появляется, когда первый экран ушёл из вида,
 // и скрывается, когда виден блок регистрации (кнопка не дублируется).
 const stickyCta = document.getElementById('sticky-cta');
-
 if (stickyCta && 'IntersectionObserver' in window) {
     const hero = document.querySelector('.hero');
     const registration = document.getElementById('registration');
@@ -92,3 +99,25 @@ if (stickyCta && 'IntersectionObserver' in window) {
         }, { threshold: 0.1 }).observe(registration);
     }
 }
+
+// Аккордеон программы: длинные описания модулей свернуты до 3 строк,
+// раскрываются по кнопке «Подробнее». Классы .program-list/.program-module не меняются.
+document.querySelectorAll('.program-module').forEach((module) => {
+    const paragraph = module.querySelector('p');
+    if (!paragraph) {
+        return;
+    }
+
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'module-toggle';
+    toggle.textContent = 'Подробнее';
+    toggle.setAttribute('aria-expanded', 'false');
+    module.appendChild(toggle);
+
+    toggle.addEventListener('click', () => {
+        const expanded = module.classList.toggle('module-open');
+        toggle.textContent = expanded ? 'Свернуть' : 'Подробнее';
+        toggle.setAttribute('aria-expanded', String(expanded));
+    });
+});
