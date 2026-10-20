@@ -91,6 +91,22 @@ img {
     max-width: 680px;
 }
 
+.hero-offer {
+    display: grid;
+    gap: 4px;
+    margin: 0 0 20px;
+    color: var(--heading);
+}
+
+.hero-offer strong {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    line-height: 1.25;
+}
+
+.hero-offer span {
+    font-size: 0.95rem;
+}
+
 .meta-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -220,13 +236,46 @@ img {
 }
 
 .emotional-photo {
-    padding: 0;
+    padding: 40px 20px;
+    background: var(--bg-soft);
+}
+
+.practice-figure {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: center;
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 24px;
+    background: var(--white);
 }
 
 .emotional-photo img {
     width: 100%;
-    height: min(70vh, 560px);
+    height: 100%;
+    min-height: 340px;
     object-fit: cover;
+}
+
+.practice-figure figcaption {
+    padding: 28px;
+}
+
+.practice-figure h2 {
+    margin: 0 0 16px;
+    color: var(--heading);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.25;
+}
+
+.practice-figure p {
+    margin: 0 0 16px;
+}
+
+.practice-caption {
+    color: #59656a;
+    font-size: 0.88rem;
 }
 
 .instructors-grid {
@@ -290,8 +339,8 @@ img {
 }
 
 .pricing-card.featured {
-    border: 2px solid var(--blue);
-    transform: scale(1.02);
+    border: 2px solid var(--heading);
+    background: linear-gradient(180deg, #ffffff, #eef8ef);
 }
 
 .price {
@@ -311,6 +360,16 @@ img {
     border-bottom: 1px solid #ece7e1;
 }
 
+.tariff-note {
+    margin: 0;
+    color: #59656a;
+    font-size: 0.92rem;
+}
+
+.pricing-card .btn-register {
+    margin-top: auto;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;
@@ -318,8 +377,8 @@ img {
     padding: 14px 24px;
     border: none;
     border-radius: 999px;
-    background: var(--blue);
-    color: var(--heading);
+    background: var(--heading);
+    color: var(--white);
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -328,8 +387,15 @@ img {
 }
 
 .btn:hover {
+    background: #3d4750;
     transform: translateY(-2px);
     box-shadow: 0 10px 24px rgba(45, 52, 54, 0.12);
+}
+
+.btn:focus-visible,
+.module-toggle:focus-visible {
+    outline: 3px solid var(--heading);
+    outline-offset: 4px;
 }
 
 .btn-register {
@@ -679,6 +745,19 @@ img {
     .hero h1 {
         margin-bottom: 16px;
         font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .practice-figure {
+        grid-template-columns: 1fr;
+    }
+
+    .emotional-photo img {
+        height: auto;
+        min-height: 0;
+    }
+
+    .practice-figure figcaption {
+        padding: 24px;
     }
 
     .btn-hero {

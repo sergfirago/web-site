@@ -12,8 +12,8 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Первая помощь: практический курс в Москве — 14 ноября 2026, от 4 900 ₽</title>
-    <meta name="description" content="Практический однодневный курс первой помощи в Москве: СЛР, кровотечения, травмы и ожоги. 8 часов практики на манекенах, сертификат, группы до 14 человек. Ближайший курс — 14 ноября 2026.">
+    <title>Первая помощь в Москве — полный курс за 4 900 ₽, 14 ноября 2026</title>
+    <meta name="description" content="Полный однодневный курс первой помощи в Москве за 4 900 ₽: практика на манекенах, СЛР, кровотечения и травмы. Сертификат, памятка и кофе-брейки включены. 14 ноября 2026, 10:00–18:00, группа до 14 человек.">
     <link rel="stylesheet" href="css/style.css">
     <script src="api/visit.php" defer></script>
     <script src="js/main.js" defer></script>
@@ -27,9 +27,13 @@
                 Отработайте СЛР, остановку кровотечения и помощь при травмах на манекенах —
                 с инструкторами, которые работают на реальных вызовах.
             </p>
+            <p class="hero-offer">
+                <strong>Полный курс — 4 900 ₽</strong>
+                <span>Сертификат, памятка и кофе-брейки включены</span>
+            </p>
             <div class="hero-actions">
-                <button type="button" class="btn btn-register btn-hero">Занять место — от 4 900 ₽</button>
-                <span class="hero-trust">Сертификат · 8 часов практики · группа до 14 человек</span>
+                <button type="button" class="btn btn-register btn-hero">Забронировать бесплатно</button>
+                <span class="hero-trust">Практика на манекенах · группа до 14 человек</span>
                 <p class="hero-assurance">Бронь бесплатна. Перезвоним для подтверждения. Оплата — после звонка.</p>
             </div>
             <div class="meta-grid">
@@ -47,7 +51,7 @@
                 </div>
             </div>
             <p class="geo-note">
-                Не из Москвы? Мы готовим онлайн-формат курса — оставьте заявку, и сообщим о запуске первыми.
+                Очное занятие в Москве. Навыки отрабатываем с инструктором на месте.
             </p>
             <div class="hero-note">
                 На курсе вы отработаете навыки на манекенах и отработаете сценарии, которые
@@ -67,11 +71,11 @@
                 </p>
                 <div class="features-grid">
                     <article class="feature-card">
-                        <h3>8 часов практики</h3>
+                        <h3>Практика на манекенах</h3>
                         <p>Больше половины времени посвящено тренировкам на манекенах, имитации травм и работе в парах.</p>
                     </article>
                     <article class="feature-card">
-                        <h3>Формат offline</h3>
+                        <h3>Очно в Москве</h3>
                         <p>Живое общение, мгновенная обратная связь и возможность задать вопросы по вашим реальным ситуациям.</p>
                     </article>
                     <article class="feature-card">
@@ -259,7 +263,15 @@
         </section>
 
         <section class="emotional-photo">
-            <img src="images/cpr-training.jpg" alt="Практика сердечно-легочной реанимации на манекене" loading="lazy" decoding="async">
+            <figure class="practice-figure">
+                <img src="images/cpr-training.jpg" alt="Отработка компрессий грудной клетки на учебном манекене" width="1600" height="1067" loading="lazy" decoding="async">
+                <figcaption>
+                    <h2>От знаний — к практике</h2>
+                    <p>На манекене можно отработать движения и последовательность действий.
+                        Инструктор показывает приём и помогает исправить ошибки.</p>
+                    <span class="practice-caption">На фото — тренировка сердечно-лёгочной реанимации на манекене.</span>
+                </figcaption>
+            </figure>
         </section>
 
         <section class="section">
@@ -307,21 +319,22 @@
             <div class="container">
                 <h2 class="section-title">Тарифы</h2>
                 <p class="section-lead">
-                    Выберите формат участия. Во все тарифы входят материалы, сертификат и доступ к памятке после курса.
+                    Базовый тариф за 4 900 ₽ включает полный однодневный курс, сертификат и памятку.
+                    Дополнительные материалы и услуги перечислены в остальных тарифах.
                 </p>
                 <div class="pricing-grid">
-                    <article class="pricing-card">
+                    <article class="pricing-card featured">
+                        <span class="pricing-badge">Полный курс</span>
                         <h3>Базовый</h3>
                         <div class="price">4 900 ₽</div>
                         <ul class="pricing-list">
-                            <li>Участие в полном однодневном курсе (≈ 612 ₽ за час практики)</li>
+                            <li>Вся программа курса с практикой на манекенах</li>
                             <li>Сертификат и памятка</li>
                             <li>Кофе-брейки</li>
                         </ul>
-                        <button type="button" class="btn btn-register">Записаться</button>
+                        <button type="button" class="btn btn-register">Забронировать бесплатно</button>
                     </article>
-                    <article class="pricing-card featured">
-                        <span class="pricing-badge">Выбирают чаще всего</span>
+                    <article class="pricing-card">
                         <h3>Расширенный</h3>
                         <div class="price">7 900 ₽</div>
                         <ul class="pricing-list">
@@ -329,7 +342,8 @@
                             <li>Набор перевязочных материалов</li>
                             <li>Дополнительный практический блок</li>
                         </ul>
-                        <button type="button" class="btn btn-register">Записаться</button>
+                        <p class="tariff-note">Условия дополнительного блока уточним при подтверждении.</p>
+                        <button type="button" class="btn btn-register">Забронировать бесплатно</button>
                     </article>
                     <article class="pricing-card">
                         <h3>Корпоративный</h3>
@@ -339,11 +353,13 @@
                             <li>Консультация для HR или руководителя</li>
                             <li>Отчёт о прохождении для работодателя</li>
                         </ul>
-                        <button type="button" class="btn btn-register">Записаться</button>
+                        <p class="tariff-note">Формат участия и документы обсудим при подтверждении.</p>
+                        <button type="button" class="btn btn-register">Забронировать бесплатно</button>
                     </article>
                 </div>
                 <p class="pricing-note">
-                    Компаниям выставляем счёт и закрывающие документы — напишите нам (контакты внизу страницы).
+                    Все кнопки ведут к общей форме бронирования. Тариф и условия подтвердим при звонке.
+                    Компаниям выставляем счёт и закрывающие документы.
                 </p>
             </div>
         </section>
@@ -353,7 +369,7 @@
                 <div class="registration-panel">
                     <h2 class="section-title">Бесплатная бронь места</h2>
                     <p class="section-lead">
-                        Курс 14 ноября · Москва · от 4 900 ₽.
+                        Очный курс 14 ноября в Москве. Базовый тариф — 4 900 ₽ за полный курс.
                         Перезвоним для подтверждения. Оплата — после звонка.
                     </p>
                     <p class="form-required-note">* — обязательные поля</p>
@@ -391,12 +407,12 @@
                     </p>
                     <div class="social-proof">
                         <div class="proof-item">
-                            <strong>Осталось 6 мест из 14</strong>
+                            <strong>Группа до 14 человек</strong>
                             <span>группа ограничена, чтобы каждый отработал навыки в парах</span>
                         </div>
                         <div class="proof-item">
-                            <strong>1 200+ обученных</strong>
-                            <span>у инструкторов курса за последние годы</span>
+                            <strong>Сертификат и памятка</strong>
+                            <span>включены в стоимость курса</span>
                         </div>
                     </div>
                     <div class="reviews">
@@ -425,8 +441,8 @@
     </footer>
 
     <div class="sticky-cta" id="sticky-cta" hidden>
-        <span class="sticky-cta-info">Курс 14 ноября · осталось 6 мест из 14</span>
-        <button type="button" class="btn btn-register">Записаться</button>
+        <span class="sticky-cta-info">14 ноября · Москва · полный курс 4 900 ₽</span>
+        <button type="button" class="btn btn-register">Забронировать бесплатно</button>
     </div>
 
     <!-- Вставьте свой счётчик Яндекс.Метрики здесь -->
