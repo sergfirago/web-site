@@ -63,3 +63,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Плавающая кнопка «Записаться»: появляется, когда первый экран ушёл из вида,
+// и скрывается, когда виден блок регистрации (кнопка не дублируется).
+const stickyCta = document.getElementById('sticky-cta');
+
+if (stickyCta && 'IntersectionObserver' in window) {
+    const hero = document.querySelector('.hero');
+    const registration = document.getElementById('registration');
+    let heroVisible = true;
+    let registrationVisible = false;
+
+    const updateVisibility = () => {
+        stickyCta.hidden = heroVisible || registrationVisible;
+    };
+
+    if (hero) {
+        new IntersectionObserver((entries) => {
+            heroVisible = entries[0].isIntersecting;
+            updateVisibility();
+        }, { threshold: 0.1 }).observe(hero);
+    }
+
+    if (registration) {
+        new IntersectionObserver((entries) => {
+            registrationVisible = entries[0].isIntersecting;
+            updateVisibility();
+        }, { threshold: 0.1 }).observe(registration);
+    }
+}

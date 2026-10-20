@@ -12,7 +12,8 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Первая помощь: практический курс для каждого</title>
+    <title>Первая помощь: практический курс в Москве — 14 ноября 2026, от 4 900 ₽</title>
+    <meta name="description" content="Практический однодневный курс первой помощи в Москве: СЛР, кровотечения, травмы и ожоги. 8 часов практики на манекенах, сертификат, группы до 14 человек. Ближайший курс — 14 ноября 2026.">
     <link rel="stylesheet" href="css/style.css">
     <script src="api/visit.php" defer></script>
     <script src="js/main.js" defer></script>
@@ -20,7 +21,7 @@
 <body>
     <header class="hero">
         <div class="container hero-content">
-            <span class="hero-badge">Офлайн-курс · 15 августа 2026</span>
+            <span class="hero-badge">Ближайший курс · 14 ноября 2026 · Москва</span>
             <h1>Первая помощь: практический курс для каждого</h1>
             <p class="hero-text">
                 Научитесь действовать уверенно в экстренной ситуации: остановить кровотечение,
@@ -31,7 +32,7 @@
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
-                    15 августа 2026, суббота
+                    14 ноября 2026, суббота · запись открыта
                 </div>
                 <div class="meta-card">
                     <strong>Время</strong>
@@ -42,6 +43,13 @@
                     Москва, ул. Примерная, 10, учебный центр «Спаси-Себя»
                 </div>
             </div>
+            <div class="hero-actions">
+                <button type="button" class="btn btn-register btn-hero">Записаться — от 4 900 ₽</button>
+                <span class="hero-trust">Сертификат · 8 часов практики · группа до 14 человек</span>
+            </div>
+            <p class="geo-note">
+                Не из Москвы? Мы готовим онлайн-формат курса — оставьте заявку, и сообщим о запуске первыми.
+            </p>
             <div class="hero-note">
                 На курсе вы отработаете навыки на манекенах и отработаете сценарии, которые
                 помогают сохранить спокойствие и принимать правильные решения под давлением времени.
@@ -252,7 +260,7 @@
         </section>
 
         <section class="emotional-photo">
-            <img src="images/cpr-training.jpg" alt="Практика сердечно-легочной реанимации на манекене">
+            <img src="images/cpr-training.jpg" alt="Практика сердечно-легочной реанимации на манекене" loading="lazy" decoding="async">
         </section>
 
         <section class="section">
@@ -307,13 +315,14 @@
                         <h3>Базовый</h3>
                         <div class="price">4 900 ₽</div>
                         <ul class="pricing-list">
-                            <li>Участие в полном однодневном курсе</li>
+                            <li>Участие в полном однодневном курсе (≈ 612 ₽ за час практики)</li>
                             <li>Сертификат и памятка</li>
                             <li>Кофе-брейки</li>
                         </ul>
                         <button type="button" class="btn btn-register">Записаться</button>
                     </article>
                     <article class="pricing-card featured">
+                        <span class="pricing-badge">Выбирают чаще всего</span>
                         <h3>Расширенный</h3>
                         <div class="price">7 900 ₽</div>
                         <ul class="pricing-list">
@@ -334,6 +343,9 @@
                         <button type="button" class="btn btn-register">Записаться</button>
                     </article>
                 </div>
+                <p class="pricing-note">
+                    Компаниям выставляем счёт и закрывающие документы — напишите нам (контакты внизу страницы).
+                </p>
             </div>
         </section>
 
@@ -342,28 +354,35 @@
                 <div class="registration-panel">
                     <h2 class="section-title">Записаться на курс</h2>
                     <p class="section-lead">
-                        Оставьте заявку, и мы свяжемся с вами, чтобы подтвердить место и ответить на вопросы.
+                        Оставьте заявку — заполнение займёт около минуты. Перезвоним в течение рабочего дня,
+                        подтвердим место и ответим на вопросы.
                     </p>
                     <form class="form-grid" id="registration-form" action="api/submit.php" method="post">
                         <label>
                             Имя
-                            <input type="text" name="name" required autocomplete="name">
+                            <input type="text" name="name" required autocomplete="name" placeholder="Как к вам обращаться">
                         </label>
                         <label>
                             Телефон
-                            <input type="tel" name="phone" required autocomplete="tel">
+                            <input type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="+7 (900) 000-00-00">
                         </label>
                         <label>
                             E-mail
-                            <input type="email" name="email" required autocomplete="email">
+                            <input type="email" name="email" required autocomplete="email" placeholder="you@example.ru">
                         </label>
                         <label>
                             Цель прохождения курса
-                            <textarea name="purpose" required></textarea>
+                            <span class="form-hint">достаточно одного предложения</span>
+                            <textarea name="purpose" required placeholder="Например: хочу действовать уверенно в походе и на даче"></textarea>
                         </label>
                         <button type="submit" class="btn">Отправить заявку</button>
                     </form>
                     <p class="form-message" id="form-message" aria-live="polite"></p>
+                    <p class="form-contacts">
+                        Не хочется заполнять форму? Напишите нам:
+                        <a href="mailto:info@spasi-sebya.ru">info@spasi-sebya.ru</a> ·
+                        Telegram: <a href="https://t.me/spasi_sebya" rel="noopener">@spasi_sebya</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -371,9 +390,16 @@
 
     <footer class="site-footer">
         <div class="container">
-            © 2026 Учебный центр «Спаси-Себя». Курс первой помощи, Москва.
+            © 2026 Учебный центр «Спаси-Себя». Курс первой помощи, Москва, ул. Примерная, 10.<br>
+            Вопросы: <a href="mailto:info@spasi-sebya.ru">info@spasi-sebya.ru</a> ·
+            Telegram: <a href="https://t.me/spasi_sebya" rel="noopener">@spasi_sebya</a>
         </div>
     </footer>
+
+    <div class="sticky-cta" id="sticky-cta" hidden>
+        <span class="sticky-cta-info">Курс 14 ноября · Москва · от 4 900 ₽</span>
+        <button type="button" class="btn btn-register">Записаться</button>
+    </div>
 
     <!-- Вставьте свой счётчик Яндекс.Метрики здесь -->
 

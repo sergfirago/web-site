@@ -390,6 +390,140 @@ img {
     color: #c0392b;
 }
 
+/* === Улучшения конверсии (по гипотезам отвалов) === */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.btn-hero {
+    width: auto;
+    padding: 16px 32px;
+    font-size: 1.05rem;
+    background: var(--heading);
+    color: #ffffff;
+}
+
+.btn-hero:hover {
+    background: #3d4750;
+}
+
+.hero-trust {
+    font-size: 0.95rem;
+    color: var(--heading);
+}
+
+.geo-note {
+    margin: 18px 0 0;
+    max-width: 680px;
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.pricing-card.featured {
+    position: relative;
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: var(--pink);
+    color: var(--heading);
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.pricing-note {
+    margin: 20px 0 0;
+    color: #6c757d;
+}
+
+.form-hint {
+    font-weight: 400;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.form-grid textarea {
+    min-height: 104px;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(184, 212, 227, 0.45);
+}
+
+.form-contacts {
+    margin-top: 8px;
+    font-size: 0.92rem;
+    color: #6c757d;
+}
+
+.form-contacts a {
+    color: var(--heading);
+}
+
+.site-footer a {
+    color: var(--heading);
+}
+
+.sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+    background: #ffffff;
+    box-shadow: 0 -10px 30px rgba(45, 52, 54, 0.14);
+}
+
+.sticky-cta[hidden] {
+    display: none;
+}
+
+.sticky-cta .btn {
+    width: auto;
+    padding: 10px 22px;
+}
+
+.sticky-cta-info {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--heading);
+}
+
+@media (max-width: 720px) {
+    .sticky-cta-info {
+        display: none;
+    }
+
+    .sticky-cta .btn,
+    .btn-hero {
+        width: 100%;
+    }
+}
+
+@media print {
+    .sticky-cta {
+        display: none;
+    }
+}
+
 .site-footer {
     padding: 28px 0 40px;
     text-align: center;
