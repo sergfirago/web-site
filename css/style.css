@@ -54,18 +54,24 @@ img {
 }
 
 .hero {
-    min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     background:
         radial-gradient(circle at top right, rgba(184, 212, 227, 0.45), transparent 35%),
         radial-gradient(circle at bottom left, rgba(245, 198, 214, 0.35), transparent 30%),
         var(--bg-main);
-    padding: 56px 0 64px;
+    padding: 56px 0 0;
 }
 
 .hero-content {
     max-width: 820px;
+}
+
+/* Keep the bottom spacing inside the sticky containing block. */
+.hero-content::after {
+    content: "";
+    display: block;
+    height: 64px;
 }
 
 .hero-badge {
@@ -478,10 +484,21 @@ img {
 
 /* === Улучшения конверсии (по гипотезам отвалов) === */
 .hero-actions {
+    position: sticky;
+    top: 12px;
+    z-index: 20;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 12px;
+    width: fit-content;
+    padding: 4px;
+    border-radius: 999px;
+    background: var(--bg-main);
+}
+
+/* Follow the existing panel state without changing its visibility rules. */
+body:has(#sticky-cta:not([hidden])) .hero-actions {
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .btn-hero {
@@ -497,13 +514,14 @@ img {
 }
 
 .hero-trust {
+    display: block;
+    margin: 12px 0;
     font-size: 0.95rem;
     color: var(--heading);
 }
 
 .hero-assurance {
-    flex-basis: 100%;
-    margin: 0;
+    margin: 12px 0 0;
     font-size: 0.95rem;
     color: var(--heading);
 }
@@ -764,8 +782,18 @@ img {
         padding-inline: 20px;
     }
 
+    .hero-actions {
+        width: 100%;
+    }
+
     .registration-panel,
     .hero-note {
         padding: 24px;
+    }
+}
+
+@media (max-height: 500px) {
+    .hero {
+        padding-top: 20px;
     }
 }

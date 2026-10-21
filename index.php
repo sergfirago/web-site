@@ -41,9 +41,9 @@
             </p>
             <div class="hero-actions">
                 <button type="button" class="btn btn-register btn-hero">Забронировать бесплатно</button>
-                <span class="hero-trust">Практика на манекенах · группа до 14 человек</span>
-                <p class="hero-assurance">Бронь бесплатна. Перезвоним для подтверждения. Оплата — после звонка.</p>
             </div>
+            <span class="hero-trust">Практика на манекенах · группа до 14 человек</span>
+            <p class="hero-assurance">Бронь бесплатна. Перезвоним для подтверждения. Оплата — после звонка.</p>
             <div class="meta-grid">
                 <div class="meta-card">
                     <strong>Дата</strong>
